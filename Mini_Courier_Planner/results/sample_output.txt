@@ -1,0 +1,37 @@
+
+========== MINI-COURIER PLANNER ==========
+Total parcels received: 8
+
+1. PARCEL PRIORITIZATION (Merge Sort)
+P04: priority=5, deadline=1, destination=D
+P01: priority=5, deadline=2, destination=A
+P08: priority=5, deadline=3, destination=E
+P02: priority=4, deadline=1, destination=B
+P06: priority=4, deadline=2, destination=A
+P03: priority=3, deadline=3, destination=C
+P07: priority=3, deadline=5, destination=C
+P05: priority=2, deadline=4, destination=E
+
+2. OPTIMAL PACKING (0/1 Knapsack, capacity=12)
+P08: weight=5, value=110
+P06: weight=3, value=70
+P07: weight=4, value=90
+Total selected weight: 12
+Maximum parcel value: 270
+
+3. SHORTEST PATHS (Dijkstra)
+Depot -> A: 3 km | Path: Depot -> B -> A
+Depot -> C: 8 km | Path: Depot -> B -> A -> C
+Depot -> E: 8 km | Path: Depot -> B -> E
+
+4. DELIVERY TOUR (Nearest Neighbor TSP Approximation)
+Depot -> A -> C -> E -> Depot
+Total tour distance (including return to depot): 19 km
+
+5. ALGORITHM COMPLEXITIES
+Merge Sort: O(n log n) time, O(n) auxiliary space
+0/1 Knapsack: O(nW) time and O(nW) space
+Dijkstra (heap): O((V+E) log V) time, O(V) extra space
+Nearest Neighbor TSP: O(k^2) time, O(k) extra space
+
+==========================================
